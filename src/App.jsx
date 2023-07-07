@@ -1,5 +1,20 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Layout from "./components/Layout/Layout";
+
+
 const App = () => {
-  return <span>Subscribe Zain keepscode</span>;
+  return <div id="dashboard">
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element ={<Layout/>}>
+
+          <Route path="dasboard" element={<Dashboard/>}/>
+
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  </div>
 };
 
 export default App;
