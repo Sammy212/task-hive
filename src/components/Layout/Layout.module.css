@@ -79,3 +79,11 @@
     font-size: 1rem;
     font-weight: 700;
 }
+
+.content {
+    margin: auto;
+    display: flex;
+    height: 100%;
+    /* align-items: center; */
+    /* margin-top: -4rem; */
+}

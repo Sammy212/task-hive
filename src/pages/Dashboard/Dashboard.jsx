@@ -1,3 +1,4 @@
+import { cardsData, groupNumber } from "../../data";
 import css from "./Dashboard.module.css";
 
 const Dashboard = () => {
@@ -8,7 +9,7 @@ const Dashboard = () => {
         {/* Left Side*/}
         <div className={css.dashboard}>
             
-            <div className={css.dashboardHead}>
+            <div className={`${css.dashboardHead} theme-container`}>
                 <div className={css.head}>
                     <span>Dashboard</span>
 
@@ -23,7 +24,21 @@ const Dashboard = () => {
                 </div>
 
                 <div className={css.cards}>
-                    cards
+                    {
+                        cardsData.map((card, index) => (
+                            <div className={css.card}>
+                                <div className={css.cardHead}>
+                                    <span>{card.title}</span>
+                                    <span>+{card.change}</span>
+                                </div>
+
+                                <div className={css.cardAmount}>
+                                    <span>$</span>
+                                    <span>{groupNumber(card.amount)}</span>
+                                </div>
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
         </div>
