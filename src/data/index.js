@@ -3,50 +3,50 @@ import moment from "moment/moment";
 export const cardsData = [
   {
     title: "Revenue",
-    change: 24,
+    change: +24,
     amount: 42056,
   },
   {
     title: "Orders",
-    change: -14,
+    change: 14,
     amount: 52125.03,
   },
   {
     title: "Expenses",
-    change: 18,
+    change: +18,
     amount: 1216.5,
   },
   {
     title: "Profit",
-    change: 12,
+    change: +12,
     amount: 10125.0,
   },
 ];
 
 export const ordersData = [
   {
-    name: "Skatebnoard",
-    type: "Illustration",
-    items: 58,
-    change: 290,
+    name: "Red hot Lipstick",
+    type: "Beauty",
+    quantity: 58,
+    price: 290,
   },
   {
-    name: "Language courses",
-    type: "Illustration",
-    items: 12,
-    change: 72
+    name: "44inch LG Tv",
+    type: "Electronics",
+    quantity: 12,
+    price: 72
   },
   {
-    name: "Office Collaboration",
-    type: "Illustration",
-    items: 7,
-    change: 70
+    name: "Philips Blender",
+    type: "Kitchen Appliances",
+    quantity: 7,
+    price: 70
   },
   {
-    name: "Robot",
-    type: "Illustration",
-    items: 21,
-    change: 15
+    name: "4 Barbells set",
+    type: "Gym Equipment",
+    quantity: 21,
+    price: 15
   }
 ]
 

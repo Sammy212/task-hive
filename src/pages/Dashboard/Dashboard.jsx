@@ -31,7 +31,7 @@ const Dashboard = () => {
                             <div className={css.card}>
                                 <div className={css.cardHead}>
                                     <span>{card.title}</span>
-                                    <span>+{card.change}</span>
+                                    <span>{card.change}%</span>
                                 </div>
 
                                 <div className={css.cardAmount}>
@@ -48,9 +48,9 @@ const Dashboard = () => {
             <Statistics/>
         </div>
 
-        <div className={css.orders}>
+        
             <Orders/>
-        </div>
+        
     </div>
   )
 }

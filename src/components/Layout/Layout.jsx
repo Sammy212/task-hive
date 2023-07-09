@@ -13,7 +13,7 @@ const Layout = () => {
 
 
         {/* Make the dashboard as default Route */}
-        {pathname === "/" && <Navigate to="/dasboard"/>}
+        {pathname === "/" && <Navigate to="/dashboard"/>}
 
         <div className={css.dashboard}>
             <div className={css.topBaseGradients}>
