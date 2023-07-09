@@ -31,7 +31,7 @@ body {
 .theme-container {
   background: rgba(0, 0, 0, 0.59);
   border-radius: 20px;
-  padding: 2rem;
+  padding: 1.4rem;
 }
 
 .gradient-red {
@@ -65,7 +65,7 @@ body {
     rgba(53, 53, 53, 0.46) 49.45%,
     rgba(53, 53, 53, 0) 103.83%
   );
-  padding: 1.5rem 1rem;
+  padding: 1rem 1rem;
 }
 
 /* scrollbar */
