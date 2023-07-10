@@ -58,10 +58,10 @@ const OrdersPieChart = () => {
                     borderColor: "black",
                     borderWidth: 5,
                 },
-                // label: {
-                //     show: false,
-                //     position: "center"
-                // },
+                label: {
+                    show: false,
+                    position: "center"
+                },
                 emphasis : {
                     label: {
                         show: true,

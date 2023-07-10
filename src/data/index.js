@@ -175,8 +175,8 @@ export const userData = [
       lastName: 'Doe',
     },
     address: '261 Erdman Ford',
-    city: 'East Daphne',
-    state: 'Kentucky',
+    city: 'Eti Osa',
+    state: 'Lagos',
   },
   {
     name: {
@@ -185,7 +185,7 @@ export const userData = [
     },
     address: '769 Dominic Grove',
     city: 'Columbus',
-    state: 'Ohio',
+    state: 'Abuja',
   },
   {
     name: {
@@ -193,8 +193,8 @@ export const userData = [
       lastName: 'Doe',
     },
     address: '566 Brakus Inlet',
-    city: 'South Linda',
-    state: 'West Virginia',
+    city: 'Zaria',
+    state: 'Kaduna State',
   },
   {
     name: {
@@ -203,7 +203,7 @@ export const userData = [
     },
     address: '722 Emie Stream',
     city: 'Lincoln',
-    state: 'Nebraska',
+    state: 'Rivers State',
   },
   {
     name: {
@@ -211,16 +211,16 @@ export const userData = [
       lastName: 'Rolluffs',
     },
     address: '32188 Larkin Turnpike',
-    city: 'Charleston',
-    state: 'South Carolina',
+    city: 'PortHarcourt',
+    state: 'Rivers State',
   }, {
     name: {
       firstName: 'Jane',
       lastName: 'Doe',
     },
     address: '769 Dominic Grove',
-    city: 'Columbus',
-    state: 'Ohio',
+    city: 'Mushin',
+    state: 'Lagos State',
   },
   {
     name: {
@@ -228,8 +228,8 @@ export const userData = [
       lastName: 'Doe',
     },
     address: '566 Brakus Inlet',
-    city: 'South Linda',
-    state: 'West Virginia',
+    city: 'Ikeja',
+    state: 'Lagos State',
   },
   {
     name: {
@@ -237,8 +237,8 @@ export const userData = [
       lastName: 'Vandy',
     },
     address: '722 Emie Stream',
-    city: 'Lincoln',
-    state: 'Nebraska',
+    city: 'PortHarcourt',
+    state: 'Rivers State',
   },
   {
     name: {
@@ -246,7 +246,7 @@ export const userData = [
       lastName: 'Rolluffs',
     },
     address: '32188 Larkin Turnpike',
-    city: 'Charleston',
-    state: 'South Carolina',
+    city: 'VI',
+    state: 'Lagos State',
   },
 ]
