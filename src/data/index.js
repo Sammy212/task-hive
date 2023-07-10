@@ -230,23 +230,5 @@ export const userData = [
     address: '566 Brakus Inlet',
     city: 'Ikeja',
     state: 'Lagos State',
-  },
-  {
-    name: {
-      firstName: 'Kevin',
-      lastName: 'Vandy',
-    },
-    address: '722 Emie Stream',
-    city: 'PortHarcourt',
-    state: 'Rivers State',
-  },
-  {
-    name: {
-      firstName: 'Joshua',
-      lastName: 'Rolluffs',
-    },
-    address: '32188 Larkin Turnpike',
-    city: 'VI',
-    state: 'Lagos State',
-  },
+  }
 ]
