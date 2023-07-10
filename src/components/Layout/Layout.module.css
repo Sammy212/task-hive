@@ -84,6 +84,13 @@
     margin: auto;
     display: flex;
     height: 100%;
+    /* align-items: center; */
+    /* margin-top: -4rem; */
+}
+
+.content>div {
     align-items: center;
-    margin-top: -4rem;
+    justify-content: center;
+    width: 100%;
+    min-width: 50vh;
 }
