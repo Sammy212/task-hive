@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "@asseinfo/react-kanban/dist/styles.css";
 import "./TaskBoard.css";
 import useBoard from "../../store/Board";
-// import AddCardModal from "../../components/AddCardModal/AddCardModal";
 
 // Assets
 import Board, {moveCard, moveColumn, removeCard, addCard} from "@asseinfo/react-kanban";
 import {RxCross2} from "react-icons/rx";
 import { IoMdAdd } from "react-icons/io";
+import AddCardModal from "../../components/AddCardModal/AddCardModal";
 
 
 const TaskBoard = () => {
@@ -91,6 +91,20 @@ const TaskBoard = () => {
                 </div>
             )}
             renderColumnHeader = {(props) => {
+
+                const [modalOpened, setModalOpened] = useState(false)
+
+                const handleCardAdd = (title, detail) => {
+                    const card = {
+                        id: new Date().getTime(),
+                        title,
+                        description: detail
+                    };
+
+                    const updatedBoard = addCard(board, props, card)
+                    setBoard(updatedBoard)
+                    setModalOpened(false)
+                }
                 return (
                     <div className="column-header">
                         <span>{props.title}</span>
@@ -99,6 +113,12 @@ const TaskBoard = () => {
                             color = "white"
                             size ={25}
                             title = "Add card"
+                            onClick={() => setModalOpened(true)}
+                        />
+                        <AddCardModal 
+                            visible={modalOpened} 
+                            handleCardAdd = {handleCardAdd}
+                            onClose = {() => setModalOpened(false)}
                         />
                     </div>
                 )
