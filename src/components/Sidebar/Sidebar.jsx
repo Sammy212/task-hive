@@ -8,7 +8,9 @@ import { FaTasks } from "react-icons/fa";
 const Sidebar = () => {
   return (
     <div className={css.container}>
-        <img src="./logo.png" alt="logo" className={css.logo} />
+        <NavLink to="dashboard">
+            <img src="./logo.png" alt="logo" className={css.logo} />
+        </NavLink>
 
         <div className={css.menu}>
             <NavLink to="dashboard" className={css.item} title={"Dashboard"}>

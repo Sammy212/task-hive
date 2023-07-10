@@ -1,8 +1,84 @@
-import React from 'react'
+import React from "react";
+import "./Calendar.css";
+import FullCalendar from "@fullcalendar/react";
+import dayGridPlugin from "@fullcalendar/daygrid";
+import interactionPlugin from "@fullcalendar/interaction";
+import timeGridPlugin from "@fullcalendar/timegrid";
+// import useCalendar from "../../store/Calendar";
+import { createEventId } from "../../data";
+import useCalendar from "../../store/Calendar";
+
+// https://fullcalendar.io/docs
+
 
 const Calendar = () => {
+
+    const {currentEvents, setCurrentEvents} = useCalendar();
+
+    const handleEvents = async (events) => {
+        await Promise.resssolve(setCurrentEvents(events));
+    }
+
+    const handleDateSelect = (selectInfo) => {
+        let title = prompt("Enter a title for the event")
+        let calendarApi = selectInfo.view.calendar;
+
+        calendarApi.unselect();
+
+
+        if(title) {
+            calendarApi.addEvent({
+                id: createEventId(),
+                title,
+                start: selectInfo.start,
+                end: selectInfo.end,
+                allDay: selectInfo.allDay
+            })
+        }
+    }
+
+    const handleEventClick = (clickInfo) => {
+        if (
+            confirm('Are you sure you want to delete this event?')
+        ) {
+            clickInfo.event.remove();
+        }
+    }
   return (
-    <div>Calendar</div>
+    <div className="calendar-container">
+        <div>
+            <FullCalendar 
+                plugins = { 
+                    [
+                        dayGridPlugin,
+                        interactionPlugin,
+                        timeGridPlugin
+                    ] 
+                }
+                
+                headerToolbar = {{
+                    left: "prev today next",
+                    center: "title",
+                    right: "dayGridMonth,timeGridWeek,timeGridDay"
+                }}
+
+                allDaySlot = {false}
+                initialView = "dayGridMonth"
+                slotDuration = {"01:00:00"}
+                editable = {true}
+                selectable = {true}
+                selectMirror = {true}
+                dayMaxEvents = {true}
+                weekends = {true}
+                nowIndicator = {true}
+                initialEvents = {[currentEvents]}
+                eventsSet = {handleEvents}
+                select = {handleDateSelect}
+                eventClick = {handleEventClick}
+                
+            />
+        </div>
+    </div>
   )
 }
 
